@@ -18,6 +18,9 @@ class _Meal_Admin_SecreenState extends State<Meal_Admin_Secreen> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(
+            height: 30,
+          ),
           Row(
             children: [
               const Text(
@@ -29,10 +32,10 @@ class _Meal_Admin_SecreenState extends State<Meal_Admin_Secreen> {
               ),
               TextFormField(
                 controller: _namecontroller,
-                keyboardType: TextInputType.text,
+                keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value!.trim().isEmpty) {
-                    return "The name must not empty";
+                    return "Email must not be empty";
                   }
                   return null;
                 },
@@ -45,7 +48,7 @@ class _Meal_Admin_SecreenState extends State<Meal_Admin_Secreen> {
                       width: 19,
                       height: 19,
                     ),
-                    hintText: 'Name Product'),
+                    hintText: 'Email'),
               ),
             ],
           )
